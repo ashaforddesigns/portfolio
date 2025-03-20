@@ -322,3 +322,20 @@ footer{
   
   
 }
+iframe{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+  
+}
+@media (max-width: 768px) {
+  #motion-design, #graphic-design, #product-design, #developing {
+    display: flex;
+    flex-direction: column;
+
+  
+}
+
+}
+
