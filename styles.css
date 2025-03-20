@@ -1,0 +1,324 @@
+:root {
+    /* Colors */
+    --yellow: #FDE300 ; /* main */
+    --orange: #F9A462; /* support */
+    --pink: #F299BD; /* support */
+    --blue: #6ACDEA; /* pop */
+    --white: #FFF2EA; /* neutral */
+    --black: #396b77; /* off-black */
+    
+    /* Typography */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'IBM Plex Sans', sans-serif;
+}
+
+/*slideshow*/
+/* body { font-family: Arial, sans-serif; text-align: center; }
+.slideshow-container { position: relative; max-width: 600px; margin: auto; }
+.slide { display: none; width: 100%; }
+
+.prev, .next {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(0,0,0,0.5); color: white; border: none;
+    padding: 10px; cursor: pointer; border-radius: 5px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.dots { margin-top: 10px; }
+.dot { display: inline-block; width: 10px; height: 10px; margin: 5px;
+       background: gray; border-radius: 50%; cursor: pointer; }
+.active { background: black; }
+
+.slide {
+  display: none;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+} */
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+
+  
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  *{
+    color:var(--black);
+  }
+/* intro animation cover */
+@keyframes intro {
+    0% {
+        background-color: var(--white);
+    }
+    
+}
+
+
+
+html{
+  background-color: var(--white);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h6 {
+  font-family:var(--heading-font);
+  text-transform: uppercase;
+  
+}
+
+h1{
+  font-size: 6rem;
+}
+h2{
+  font-size:2rem;
+}
+
+p, li, a {
+  font-family: var(--body-font);
+  font-weight: 410;
+  
+}
+li{
+  list-style: none;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  min-height: 100vh;
+  text-align: center;
+  
+  
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+#navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 100px;
+  padding-block: 20px;
+}
+
+#site-logo {
+  max-width:15vw;
+  display: inline;
+  padding-block: 10px;
+
+}
+a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cta{
+  text-align: center;
+
+}
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(10px);
+  }
+}
+
+.down-arrow{
+  display: block;
+  font-size: 3rem;
+  animation: bounce 1.5s infinite ease-in-out;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+
+}
+
+.cta-buttons{
+  border: none;
+  
+  padding: 1em;
+  border-radius: 10px;
+  margin-inline:5px;
+  margin-block:50px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.cta-buttons-other{
+  border: none;
+  font-family: var(--body-font);
+  font-weight: 700;
+  padding: 1em;
+  padding-inline:40px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--orange);
+  
+}
+
+#mail{
+  animation: gradientCycle 2s infinite;  background-size: 200% 100%;
+  transition: background 0.5s ease-in-out;
+  
+}
+#mail:hover{
+  background-color: var(--orange);
+}
+
+@keyframes gradientCycle {
+  0% { background-color: var(--orange); }
+  33% { background-color: var(--pink) }
+  66% { background-color: var(--yellow) }
+  100% { background-color: var(--orange) }
+}
+
+section:not(#hero) {
+  padding-block:100px;
+}
+
+#motion-design, #graphic-design, #product-design, #developing {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+  gap: 80px; 
+  text-align: center;
+  margin-inline: 50px;
+}
+
+.section-header, .extra-context {
+  grid-column: span 2; 
+  text-align: center; 
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  
+}
+
+h3 {
+  margin-block:10px;
+}
+
+img:not(#site-logo){
+  margin-block:20px;
+  cursor: pointer;
+}
+
+.enlarged {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.25); /* Adjust the scale value as needed */
+  
+  transition: transform 0.3s ease; /* Smooth transition */
+  z-index: 10; /* Ensures the image stays above other content */
+  
+  
+}
+
+@media (max-width: 768px) {
+  section {
+      grid-template-columns: 1fr; /* 1 column */
+  }
+}
+a:hover:not(.down-arrow){
+  color: var(--orange);
+  text-decoration: underline;
+  
+}
+
+
+@keyframes flashOrange {
+  0% {
+    color: var(--black); /* Starting color (adjust as needed) */
+  }
+  50% {
+    color: orange; /* Flashing color */
+  }
+  100% {
+    color: var(--black); /* Returning to the original color */
+  }
+}
+
+.award-winning {
+  animation: flashOrange 2s ease-in-out infinite; /* Adjust timing and easing */
+}
+
+p:not(.extra-context){
+  margin-block: 10px;
+}
+.extra-context{
+  margin-block: -60px;
+  padding-bottom: -60px;
+}
+
+footer{
+  text-align: center;
+}
+
+#site-screenshot{
+  border-width: 5px;
+  border-color: #fff;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+#gdusa{
+  display: inline;
+  max-width: 4rem;
+  
+  
+}
